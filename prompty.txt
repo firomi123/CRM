@@ -1,0 +1,34 @@
+Prompt 0 
+zaproponuj architekturę i się jej trzymaj 
+
+Prompt 1 — setup + dependencies
+
+Utwórz projekt Vite React + TypeScript. Dodaj Tailwind. Dodaj zależności: @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities zustand (opcjonalnie) zod vitest @testing-library/react. Skonfiguruj Vitest. Zrób strukturę katalogów src/domain, src/storage, src/ui.
+
+Prompt 2 — domain types + seed
+
+Zdefiniuj typy Company, Contact, Lead oraz enum statusów. Dodaj funkcję makeSeedData() z kilkoma firmami, kontaktami i leadami w różnych statusach i tagach.
+
+Prompt 3 — repo + persist
+
+Zrób prosty repozytorium w src/storage/repo.ts z CRUD dla firm/kontaktów/leadów. Persystencja w localStorage (key: crm_db_v1). Dodaj migrate/version.
+
+Prompt 4 — smart search
+
+Zaimplementuj src/domain/search.ts: funkcja search(db, query) wspierająca: zwykły tekst, tag:<name>, status:<status>. Zwracaj listę leadów posortowaną po score.
+
+Prompt 5 — CSV parser + mapping + walidacje
+
+Zaimplementuj parseCsv(text, delimiterAuto) oraz mapColumns(headers, mapping) + validateLeadImportRow(). Obsłuż tags jako ; albo ,. Status nieznany → NEW + warning.
+
+Prompt 6 — testy
+
+Napisz testy Vitest dla parseCsv (min 3 przypadki) i search (tag/status/free text). Dodaj test walidacji importu.
+
+Prompt 7 — UI: Kanban
+
+Zrób KanbanBoard z 5 kolumnami statusów, LeadCard, drag&drop (dnd-kit). Drop zmienia status leada i zapisuje w repo.
+
+Prompt 8 — UI: CSV import wizard
+
+Zrób CsvImportWizard: upload pliku lub textarea, wykryj headers, UI mapowania (select per kolumna), preview 5 wierszy, import z raportem błędów i warningów.

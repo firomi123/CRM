@@ -1,0 +1,21 @@
+Mini CRM (Companies + Contacts + Leads) z:
+
+Kanban leadów (drag&drop między statusami)
+
+Smart search (wyszukuje w leadach/firmach/kontaktach + tagi)
+
+Import CSV leadów z mapowaniem kolumn
+
+Local storage (na szybko) lub IndexedDB (opcjonalnie)
+
+Testy: parser CSV + walidacje + search
+
+Stack (bezpieczny na czas):
+
+Vite + React + TypeScript
+
+UI: Tailwind + (opcjonalnie) shadcn/ui
+
+Drag&Drop: @dnd-kit/core + @dnd-kit/sortable
+
+Testy: Vitest
